@@ -1,14 +1,13 @@
 import BannerSlider from '../components/BannerSlider';
-import ServiceCarousel from '../components/ServiceCarousel';
 
-const Home = () => (
-  <div>
-    <BannerSlider />
-    <section className="p-6">
-      <h2 className="text-center text-2xl font-bold mb-4">Our Services</h2>
-      <ServiceCarousel />
-    </section>
-  </div>
-);
+const Home = () => {
+  return (
+    <div className="pt-6">
+      <div className="max-w-6xl mx-auto px-4">
+        <BannerSlider />
+      </div>
+    </div>
+  );
+};
 
 export default Home;

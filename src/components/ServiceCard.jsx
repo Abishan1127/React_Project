@@ -1,8 +1,8 @@
 const ServiceCard = ({ title, description, icon }) => (
-  <div className="bg-white shadow-md p-4 rounded-md text-center">
-    <img src={icon} alt={title} className="h-12 mx-auto mb-2" />
-    <h3 className="text-xl font-semibold">{title}</h3>
-    <p>{description}</p>
+  <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
+    <img src={icon} alt={title} className="w-12 h-12 mx-auto mb-4" />
+    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
   </div>
 );
 
