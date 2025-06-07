@@ -1,22 +1,29 @@
+import client1 from '../assets/client1.jpg';
+import client2 from '../assets/client2.jpg';
+import client3 from '../assets/client3.jpg';
+import team1 from '../assets/team1.jpg';
+import team2 from '../assets/team2.jpg';
+import team3 from '../assets/team3.jpg';
+
 const team = [
-  { name: "Sarah Chen", role: "CEO", image: "/assets/team1.png" },
-  { name: "David Rodriguez", role: "CTO", image: "/assets/team2.png" },
-  { name: "Emily Carter", role: "Head of Design", image: "/assets/team3.png" },
+  { name: "Sarah Chen", role: "CEO", image: team1 },
+  { name: "David Rodriguez", role: "CTO", image: team2 },
+  { name: "Emily Carter", role: "Head of Design", image: team3 },
 ];
 
 const testimonials = [
   {
-    image: "/assets/client1.jpg",
+    image: client1,
     text: "Innovatech Solutions transformed our business with their innovative solutions.",
     author: "Alex Johnson, CEO of TechCorp",
   },
   {
-    image: "/assets/client2.jpg",
+    image: client2,
     text: "Their team's expertise and dedication are unmatched.",
     author: "Michael Lee, Founder of StartupX",
   },
   {
-    image: "/assets/client3.jpg",
+    image: client3,
     text: "We highly recommend Innovatech Solutions for any technology needs.",
     author: "Jessica Brown, Director at Global Enterprises",
   },
@@ -80,3 +87,6 @@ const About = () => {
 };
 
 export default About;
+
+
+

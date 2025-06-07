@@ -2,37 +2,43 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import service1 from '../assets/service1.png';
+import service2 from '../assets/service2.png';
+import service3 from '../assets/service3.png';
+import service4 from '../assets/service4.png';
+import service5 from '../assets/service5.png';
+import service6 from '../assets/service6.png';
 
 const services = [
   {
     title: 'Software Development',
     description: 'Custom software solutions tailored to your unique business needs.',
-    image: '/assets/service1.jpg',
+    image: service1,
   },
   {
     title: 'Cloud Solutions',
     description: 'Scalable and secure cloud infrastructure and management.',
-    image: '/assets/service2.jpg',
+    image: service2,
   },
   {
     title: 'Data Analytics',
     description: 'Actionable insights from your data to drive informed decisions.',
-    image: '/assets/service3.jpg',
+    image: service3,
   },
   {
     title: 'Cybersecurity',
     description: 'Protecting your digital assets with robust security measures.',
-    image: '/assets/service4.jpg',
+    image: service4,
   },
   {
     title: 'IT Consulting',
     description: 'Expert guidance to optimize your IT strategy and operations.',
-    image: '/assets/service5.jpg',
+    image: service5,
   },
   {
     title: 'Digital Transformation',
     description: 'Transforming your business with innovative digital technologies.',
-    image: '/assets/service6.jpg',
+    image: service6,
   },
 ];
 
