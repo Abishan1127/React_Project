@@ -2,20 +2,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import banner1 from '../assets/banner1.jpg';
+import banner2 from '../assets/banner2.jpg';
+import banner3 from '../assets/banner3.jpg';
 
 const slides = [
   {
-    image: '/assets/banner1.jpg',
+    image: banner1,
     heading: 'Welcome to Innovatech Solutions',
     subtext: 'Your partner in digital transformation. We provide cutting-edge solutions tailored to your business needs.',
   },
   {
-    image: '/assets/banner2.jpg',
+    image: banner2,
     heading: 'Empowering Your Digital Future',
     subtext: 'Smart, scalable, and efficient digital services to grow your business.',
   },
   {
-    image: '/assets/banner3.jpg',
+    image: banner3,
     heading: 'Build. Scale. Succeed.',
     subtext: 'From idea to deployment, we help you succeed with modern tech.',
   },
@@ -52,3 +55,8 @@ const BannerSlider = () => {
 };
 
 export default BannerSlider;
+
+
+
+
+
