@@ -1,9 +1,19 @@
-const ServiceCard = ({ title, description, icon }) => (
-  <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition-shadow">
-    <img src={icon} alt={title} className="w-12 h-12 mx-auto mb-4" />
-    <h3 className="text-lg font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
+import React from 'react';
+
+const ServiceCard = ({ title, description, image }) => {
+  return (
+    <div className="bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-4">
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <p className="text-gray-600 text-sm mt-1">{description}</p>
+      </div>
+    </div>
+  );
+};
 
 export default ServiceCard;

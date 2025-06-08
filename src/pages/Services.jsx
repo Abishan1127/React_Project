@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import ServiceCard from '../components/ServiceCard'; // Import ServiceCard
 import service1 from '../assets/service1.png';
 import service2 from '../assets/service2.png';
 import service3 from '../assets/service3.png';
@@ -66,17 +67,11 @@ const Services = () => {
       >
         {services.map((service, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold">{service.title}</h3>
-                <p className="text-gray-600 text-sm mt-1">{service.description}</p>
-              </div>
-            </div>
+            <ServiceCard
+              title={service.title}
+              description={service.description}
+              image={service.image}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
