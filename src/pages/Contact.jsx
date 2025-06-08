@@ -94,8 +94,8 @@ const Contact = () => {
         {/* Contact Info */}
         <div className="mt-12 border-t pt-8 text-sm text-gray-600">
           <h3 className="font-semibold mb-2 text-lg">Our Office</h3>
-          <p className="mb-1"><strong>Address:</strong> 123 Green Street, Suite 456, Sustainable City, CA 90001</p>
-          <p className="mb-1"><strong>Phone:</strong> +1 (555) 123–4567</p>
+          <p className="mb-1"><strong>Address:</strong> 186 Green Street, Kili Town, Kilinochchi City, Sri Lanka</p>
+          <p className="mb-1"><strong>Phone:</strong> +94 (076) 410–1633</p>
           <p><strong>Email:</strong> info@ecosolutions.com</p>
         </div>
       </div>
