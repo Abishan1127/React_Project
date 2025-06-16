@@ -26,23 +26,36 @@ const slides = [
 
 const BannerSlider = () => {
   return (
-    <div className="w-full">
+    <div className="w-100">
       <Swiper
         modules={[Autoplay]}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop
-        className="rounded-xl overflow-hidden"
+        className="rounded overflow-hidden"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="h-[400px] md:h-[500px] bg-cover bg-center flex flex-col justify-center items-center text-white text-center px-4"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              className="d-flex align-items-center justify-content-center text-white text-center"
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '500px',
+                position: 'relative',
+              }}
             >
-              <div className="bg-black/50 w-full h-full flex flex-col justify-center items-center px-4">
-                <h2 className="text-2xl md:text-4xl font-bold">{slide.heading}</h2>
-                <p className="mt-4 max-w-2xl">{slide.subtext}</p>
-                <button className="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow">
+              <div
+                className="position-absolute top-0 start-0 w-100 h-100"
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+              ></div>
+
+              <div className="position-relative px-3">
+                <h2 className="display-5 fw-bold">{slide.heading}</h2>
+                <p className="mt-3 mx-auto" style={{ maxWidth: '700px' }}>
+                  {slide.subtext}
+                </p>
+                <button className="btn btn-primary mt-4 shadow">
                   Explore Our Services
                 </button>
               </div>
@@ -55,9 +68,3 @@ const BannerSlider = () => {
 };
 
 export default BannerSlider;
-
-
-
-
-
-

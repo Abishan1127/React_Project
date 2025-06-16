@@ -12,91 +12,75 @@ const validationSchema = Yup.object({
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-8">
-        <h2 className="text-3xl font-bold mb-2 text-center">Contact Us</h2>
-        <p className="text-gray-600 mb-8 text-center">
-          Reach out to us for any inquiries or to discuss your project needs.
-        </p>
+    <div className="py-5 bg-light min-vh-100">
+      <div className="container">
+        <div className="card shadow-sm border-0 p-4 mx-auto" style={{ maxWidth: '700px' }}>
+          <h2 className="text-center fw-bold mb-2">Contact Us</h2>
+          <p className="text-center text-muted mb-4">
+            Reach out to us for any inquiries or to discuss your project needs.
+          </p>
 
-        <Formik
-          initialValues={{ name: '', email: '', subject: '', message: '' }}
-          validationSchema={validationSchema}
-          onSubmit={(values, { resetForm }) => {
-            console.log('Form submitted:', values);
-            resetForm();
-          }}
-        >
-          {() => (
-            <Form className="grid grid-cols-1 gap-6">
-              {/* Name */}
-              <div>
-                <label className="block font-semibold mb-1">Your Name</label>
-                <Field
-                  name="name"
-                  type="text"
-                  placeholder="Enter your name"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <ErrorMessage name="name" component="div" className="text-red-500 text-sm mt-1" />
-              </div>
+          <Formik
+            initialValues={{ name: '', email: '', subject: '', message: '' }}
+            validationSchema={validationSchema}
+            onSubmit={(values, { resetForm }) => {
+              console.log('Form submitted:', values);
+              resetForm();
+            }}
+          >
+            {() => (
+              <Form>
+                {/* Name */}
+                <div className="mb-3">
+                  <label className="form-label fw-semibold">Your Name</label>
+                  <Field name="name" type="text" placeholder="Enter your name" className="form-control" />
+                  <ErrorMessage name="name" component="div" className="text-danger small mt-1" />
+                </div>
 
-              {/* Email */}
-              <div>
-                <label className="block font-semibold mb-1">Your Email</label>
-                <Field
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <ErrorMessage name="email" component="div" className="text-red-500 text-sm mt-1" />
-              </div>
+                {/* Email */}
+                <div className="mb-3">
+                  <label className="form-label fw-semibold">Your Email</label>
+                  <Field name="email" type="email" placeholder="Enter your email" className="form-control" />
+                  <ErrorMessage name="email" component="div" className="text-danger small mt-1" />
+                </div>
 
-              {/* Subject */}
-              <div>
-                <label className="block font-semibold mb-1">Subject</label>
-                <Field
-                  name="subject"
-                  type="text"
-                  placeholder="Enter the subject"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <ErrorMessage name="subject" component="div" className="text-red-500 text-sm mt-1" />
-              </div>
+                {/* Subject */}
+                <div className="mb-3">
+                  <label className="form-label fw-semibold">Subject</label>
+                  <Field name="subject" type="text" placeholder="Enter the subject" className="form-control" />
+                  <ErrorMessage name="subject" component="div" className="text-danger small mt-1" />
+                </div>
 
-              {/* Message */}
-              <div>
-                <label className="block font-semibold mb-1">Message</label>
-                <Field
-                  name="message"
-                  as="textarea"
-                  placeholder="Enter your message"
-                  rows={5}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <ErrorMessage name="message" component="div" className="text-red-500 text-sm mt-1" />
-              </div>
+                {/* Message */}
+                <div className="mb-3">
+                  <label className="form-label fw-semibold">Message</label>
+                  <Field
+                    name="message"
+                    as="textarea"
+                    rows={5}
+                    placeholder="Enter your message"
+                    className="form-control"
+                  />
+                  <ErrorMessage name="message" component="div" className="text-danger small mt-1" />
+                </div>
 
-              {/* Submit */}
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md shadow"
-                >
-                  Send Message
-                </button>
-              </div>
-            </Form>
-          )}
-        </Formik>
+                {/* Submit Button */}
+                <div className="text-center">
+                  <button type="submit" className="btn btn-primary px-5 shadow-sm">
+                    Send Message
+                  </button>
+                </div>
+              </Form>
+            )}
+          </Formik>
 
-        {/* Contact Info */}
-        <div className="mt-12 border-t pt-8 text-sm text-gray-600">
-          <h3 className="font-semibold mb-2 text-lg">Our Office</h3>
-          <p className="mb-1"><strong>Address:</strong> 186 Green Street, Kili Town, Kilinochchi City, Sri Lanka</p>
-          <p className="mb-1"><strong>Phone:</strong> +94 (076) 410–1633</p>
-          <p><strong>Email:</strong> info@ecosolutions.com</p>
+          {/* Contact Info */}
+          <div className="mt-5 pt-4 border-top text-muted small">
+            <h5 className="fw-semibold mb-2">Our Office</h5>
+            <p className="mb-1"><strong>Address:</strong> 186 Green Street, Kili Town, Kilinochchi City, Sri Lanka</p>
+            <p className="mb-1"><strong>Phone:</strong> +94 (076) 410–1633</p>
+            <p><strong>Email:</strong> info@ecosolutions.com</p>
+          </div>
         </div>
       </div>
     </div>

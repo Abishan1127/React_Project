@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import ServiceCard from '../components/ServiceCard'; // Import ServiceCard
+
+import ServiceCard from '../components/ServiceCard'; 
 import service1 from '../assets/service1.png';
 import service2 from '../assets/service2.png';
 import service3 from '../assets/service3.png';
@@ -45,9 +46,9 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold mb-2">Our Services</h2>
-      <p className="text-gray-600 mb-6 max-w-3xl">
+    <div className="container py-5">
+      <h2 className="h3 fw-bold mb-3">Our Services</h2>
+      <p className="text-muted mb-4" style={{ maxWidth: '700px' }}>
         Explore our comprehensive suite of services designed to propel your business forward.
         From cutting-edge technology solutions to strategic consulting, we’re here to help you
         achieve your goals.
@@ -63,15 +64,17 @@ const Services = () => {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
-        className="py-6"
+        className="py-3"
       >
         {services.map((service, index) => (
           <SwiperSlide key={index}>
-            <ServiceCard
-              title={service.title}
-              description={service.description}
-              image={service.image}
-            />
+            <div className="p-2">
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                image={service.image}
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

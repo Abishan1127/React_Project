@@ -2,15 +2,16 @@ import React from 'react';
 
 const ServiceCard = ({ title, description, image }) => {
   return (
-    <div className="bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+    <div className="card h-100 shadow-sm border-0">
       <img
         src={image}
         alt={title}
-        className="w-full h-48 object-cover"
+        className="card-img-top"
+        style={{ height: '200px', objectFit: 'cover' }}
       />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-gray-600 text-sm mt-1">{description}</p>
+      <div className="card-body">
+        <h5 className="card-title fw-semibold">{title}</h5>
+        <p className="card-text text-muted small">{description}</p>
       </div>
     </div>
   );

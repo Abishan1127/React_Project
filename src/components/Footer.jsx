@@ -1,49 +1,50 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-700 mt-16 border-t">
-      <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
-        
-        {/* Company Info */}
-        <div>
-          <h5 className="text-lg font-bold mb-2">Innovatech Solutions</h5>
-          <p>
-            Driving digital transformation through cutting-edge technology and dedicated expertise.
-          </p>
-        </div>
+    <footer className="bg-light mt-5 border-top">
+      <div className="container py-5">
+        <div className="row text-muted small">
+          {/* Company Info */}
+          <div className="col-md-3 mb-4">
+            <h5 className="fw-bold text-dark">Innovatech Solutions</h5>
+            <p>
+              Driving digital transformation through cutting-edge technology and dedicated expertise.
+            </p>
+          </div>
 
-        {/* Links */}
-        <div>
-          <h6 className="font-semibold mb-2">Links</h6>
-          <ul className="space-y-1">
-            <li><a href="/" className="hover:underline">Home</a></li>
-            <li><a href="/about" className="hover:underline">About</a></li>
-            <li><a href="/services" className="hover:underline">Services</a></li>
-            <li><a href="/contact" className="hover:underline">Contact</a></li>
-          </ul>
-        </div>
+          {/* Links */}
+          <div className="col-md-3 mb-4">
+            <h6 className="fw-semibold text-dark">Links</h6>
+            <ul className="list-unstyled">
+              <li><a href="/" className="text-muted text-decoration-none">Home</a></li>
+              <li><a href="/about" className="text-muted text-decoration-none">About</a></li>
+              <li><a href="/services" className="text-muted text-decoration-none">Services</a></li>
+              <li><a href="/contact" className="text-muted text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
 
-        {/* Contact */}
-        <div>
-          <h6 className="font-semibold mb-2">Contact</h6>
-          <p>123 Green Street, Suite 456</p>
-          <p>Sustainable City, CA 90001</p>
-          <p className="mt-2">+1 (555) 123–4567</p>
-          <p>info@innovatech.com</p>
-        </div>
+          {/* Contact */}
+          <div className="col-md-3 mb-4">
+            <h6 className="fw-semibold text-dark">Contact</h6>
+            <p>123 Green Street, Suite 456</p>
+            <p>Sustainable City, CA 90001</p>
+            <p className="mt-2">+1 (555) 123–4567</p>
+            <p>info@innovatech.com</p>
+          </div>
 
-        {/* Socials */}
-        <div>
-          <h6 className="font-semibold mb-2">Follow Us</h6>
-          <div className="flex space-x-4 mt-2 text-lg">
-            <a href="#"><i className="bi bi-twitter"></i></a>
-            <a href="#"><i className="bi bi-facebook"></i></a>
-            <a href="#"><i className="bi bi-linkedin"></i></a>
-            <a href="#"><i className="bi bi-instagram"></i></a>
+          {/* Socials */}
+          <div className="col-md-3 mb-4">
+            <h6 className="fw-semibold text-dark">Follow Us</h6>
+            <div className="d-flex gap-3 mt-2 fs-5">
+              <a href="#"><i className="bi bi-twitter text-muted"></i></a>
+              <a href="#"><i className="bi bi-facebook text-muted"></i></a>
+              <a href="#"><i className="bi bi-linkedin text-muted"></i></a>
+              <a href="#"><i className="bi bi-instagram text-muted"></i></a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-gray-200 text-center py-4 text-sm text-gray-600">
+      <div className="bg-secondary-subtle text-center py-3 text-muted small">
         © {new Date().getFullYear()} Innovatech Solutions. All rights reserved.
       </div>
     </footer>
